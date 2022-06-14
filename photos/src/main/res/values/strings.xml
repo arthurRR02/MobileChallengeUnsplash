@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Photos</string>
+    <string name="search">Search</string>
+    <string name="refresh">Refresh</string>
+    <string name="sponsor_name_label">Sponsor Name:</string>
+    <string name="return_button">Return Button</string>
+    <string name="description_label">Description:</string>
+</resources>

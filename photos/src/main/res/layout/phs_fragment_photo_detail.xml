@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/darker_violet"
+    android:theme="@style/Theme.MobileChallengeUnsplash">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/toolbar">
+
+            <ImageView
+                android:id="@+id/ic_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <TextView
+            android:id="@+id/photo_detail_sponsor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/sponsor_name_label" />
+
+        <TextView
+            android:id="@+id/photo_detail_sponsor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sponsor Name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/photo_detail_sponsor_label"
+            app:layout_constraintTop_toBottomOf="@id/photo_detail_sponsor_label"/>
+
+        <TextView
+            android:id="@+id/photo_detail_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/photo_detail_sponsor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/description_label" />
+
+        <TextView
+            android:id="@+id/photo_detail_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/photo_detail_description_label"
+            app:layout_constraintTop_toBottomOf="@id/photo_detail_description_label"
+            tools:text="Description" />
+
+        <ImageView
+            android:id="@+id/photo_detail_ic_likes"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_likes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo_detail_description" />
+
+
+        <TextView
+            android:id="@+id/photo_detail_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/photo_detail_ic_likes"
+            app:layout_constraintTop_toTopOf="@id/photo_detail_ic_likes"
+            app:layout_constraintBottom_toBottomOf="@id/photo_detail_ic_likes"
+            tools:text="Likes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
