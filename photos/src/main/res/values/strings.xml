@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Photos</string>
     <string name="search">Search</string>
-    <string name="refresh">Refresh</string>
+    <string name="no_connection_button">Try again</string>
     <string name="sponsor_name_label">Sponsor Name:</string>
     <string name="return_button">Return Button</string>
     <string name="description_label">Description:</string>
+    <string name="connection_error_title">No internet connection</string>
+    <string name="connection_error_message">Please, check your connection and try again</string>
 </resources>

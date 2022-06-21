@@ -7,9 +7,9 @@ import java.lang.Exception
 
 class UnsplashServiceImp(private val service: UnsplashService) {
 
-    suspend fun getList(page: String, perPage: String): Response<List<UnsplashDTO>> {
+    suspend fun getList(page: String): Response<List<UnsplashDTO>> {
         try {
-            return service.getPhotoGrid(page, perPage)
+            return service.getPhotoGrid(page)
         } catch (e: Throwable) {
             throw Exception(e)
         }
@@ -17,11 +17,10 @@ class UnsplashServiceImp(private val service: UnsplashService) {
 
     suspend fun getSearchedList(
         page: String,
-        perPage: String,
         query: String
     ): Response<SearchedUnsplashDTO> {
         try {
-            return service.getSearchedList(page, perPage, query)
+            return service.getSearchedList(page, query)
         } catch (e: Throwable) {
             throw Exception(e)
         }

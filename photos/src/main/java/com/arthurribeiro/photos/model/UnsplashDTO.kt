@@ -15,15 +15,11 @@ class UnsplashDTO(
     val id: String? = null,
     val createdAt: String? = null,
     val updatedAt: String? = null,
-    val promoted_at: String? = null,
     val width: Long? = null,
     val height: Long? = null,
     val color: String? = null,
-    val blurHash: String? = null,
     val description: String? = null,
-    val altDescription: String? = null,
     val urls: Urls? = null,
-    val links: Links? = null,
     val likes: Long? = null,
     val likedByUser: Boolean? = null,
     val sponsorship: Sponsorship? = null
@@ -39,42 +35,19 @@ class Urls(
     val smallS3: String? = null
 ) : Parcelable
 
-@Parcelize
-class Links(
-    val self: String? = null,
-    val html: String? = null,
-    val download: String? = null,
-    val downloadLocation: String? = null
-) : Parcelable
 
 @Parcelize
 class Sponsorship(
-    val impressionUrls: List<String>? = null,
-    val taglineUrl: String? = null,
     val sponsor: Sponsor? = null
 ) : Parcelable
 
 @Parcelize
 class Sponsor(
     val id: String? = null,
-    val updatedAt: String? = null,
     val userName: String? = null,
     val name: String? = null,
     val firstName: String? = null,
     val lastName: String? = null,
-    val twitterUserName: String? = null,
-    val portfolioUrl: String? = null,
-    val bio: String? = null,
-    val location: String? = null,
-    val links: SponsorLinks? = null,
-    val profileImage: ProfileImage? = null,
-    val instagramUserName: String? = null,
-    val totalCollections: Int? = null,
-    val totalLikes: Int? = null,
-    val totalPhotos: Int? = null,
-    val acceptedTos: Boolean? = null,
-    val forHire: Boolean? = null,
-    val social: Social? = null
 ) : Parcelable
 
 @Parcelize
@@ -95,12 +68,5 @@ class ProfileImage(
     val large: String? = null
 ) : Parcelable
 
-@Parcelize
-class Social(
-    val instagramUserName: String? = null,
-    val portfolioUserName: String? = null,
-    val twitterUserName: String? = null,
-    val paypalEmail: String? = null
-) : Parcelable
 
 

@@ -3,17 +3,17 @@ package com.arthurribeiro.photos.photogrid
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.arthurribeiro.photos.databinding.PhsPhotoItemBinding
 import com.arthurribeiro.photos.model.UnsplashDTO
 import com.arthurribeiro.photos.util.getImageFromUrl
 
 class PhotoGridAdapter(
-    private val photoList: List<UnsplashDTO>,
     private val activity: Activity,
     private val clickCallBack: ((UnsplashDTO) -> Unit)? = null,
-) :
-    RecyclerView.Adapter<PhotoGridAdapter.PhotoGridViewHolder>() {
+) : PagingDataAdapter<UnsplashDTO, PhotoGridAdapter.PhotoGridViewHolder>(DiffCallback()) {
 
     inner class PhotoGridViewHolder(private val binding: PhsPhotoItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -36,9 +36,16 @@ class PhotoGridAdapter(
     }
 
     override fun onBindViewHolder(holder: PhotoGridViewHolder, position: Int) {
-        val item = photoList[position]
-        holder.bind(item)
+        val item = getItem(position)
+        item?.let { holder.bind(it) }
     }
 
-    override fun getItemCount() = photoList.size
+    class DiffCallback : DiffUtil.ItemCallback<UnsplashDTO>() {
+        override fun areItemsTheSame(oldItem: UnsplashDTO, newItem: UnsplashDTO): Boolean =
+            oldItem.id == newItem.id
+
+        override fun areContentsTheSame(oldItem: UnsplashDTO, newItem: UnsplashDTO): Boolean =
+            oldItem.equals(newItem)
+
+    }
 }

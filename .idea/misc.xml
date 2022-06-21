@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash/photos/src/main/res/drawable/button_bg.xml" value="0.198" />
+        <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash/photos/src/main/res/layout/activity_main_photos.xml" value="0.1546875" />
         <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash/photos/src/main/res/layout/phs_fragment_photo_detail.xml" value="0.33" />
+        <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash/photos/src/main/res/layout/phs_fragment_photo_grid.xml" value="0.33" />
+        <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash/photos/src/main/res/layout/phs_photo_item.xml" value="0.1606962663975782" />
         <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash2/app/src/main/res/layout/activity_main.xml" value="0.1546875" />
         <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash2/photos/src/main/res/drawable/ic_close.xml" value="0.168" />
         <entry key="..\:/Users/unimu/AndroidStudioProjects/MobileChallengeUnsplash2/photos/src/main/res/layout/activity_main_photos.xml" value="0.1546875" />
