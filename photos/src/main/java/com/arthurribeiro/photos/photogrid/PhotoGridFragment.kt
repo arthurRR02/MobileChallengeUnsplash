@@ -30,7 +30,6 @@ class PhotoGridFragment : Fragment() {
 
     private val viewModel: PhotoViewModel by sharedViewModel()
     private lateinit var adapter: PhotoGridAdapter
-    private var recyclerState: Parcelable? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,9 +47,9 @@ class PhotoGridFragment : Fragment() {
         setViews()
     }
 
-    override fun onResume() {
-        super.onResume()
-        adapter.refresh()
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
     private fun setObservers() {

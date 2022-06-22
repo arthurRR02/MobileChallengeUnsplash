@@ -16,7 +16,7 @@ class PhotoDetailFragment : Fragment(){
 
     private var _binding: PhsFragmentPhotoDetailBinding? = null
     private val binding get() = _binding!!
-    private val viewModel by sharedViewModel<PhotoViewModel>()
+
     private val args by lazy {
         val args: PhotoDetailFragmentArgs by navArgs()
         args.unsplashDTO
@@ -34,9 +34,13 @@ class PhotoDetailFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        viewModel.comingFromPhotoDetail = true
         setActions()
         setViews()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
     private fun setViews(){
